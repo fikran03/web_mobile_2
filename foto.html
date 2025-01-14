@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+        <html lang="id">
+        <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pimpinan dan Galeri</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* General page styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            text-align: center;
+            color: #ffffff;
+            margin: 10px 0;
+        }
+
+        h2 {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            text-align: center;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        h1 {
+            font-size: 2em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        /* Container for both leadership and gallery sections */
+        .main-container {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            width: 100%; /* Ubah ini agar melebar ke kanan */
+        }
+
+        /* Leadership Section */
+        .leadership-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            background-color: #373737;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .leader-card {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            height: 350px;
+        }
+
+        .leader-photo {
+            border-radius: 50%;
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .leader-name {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .leader-position {
+            color: #777;
+            font-size: 1em;
+        }
+
+        /* Gallery Section */
+        .gallery-container {
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        #gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            width: 100%;
+            height: 90%;
+        }
+
+        #gallery a img {
+            border-radius: 8px;
+            transition: transform 0.3s;
+            width: 100%;
+            height: auto;
+        }
+
+        #gallery a img:hover {
+            transform: scale(1.05);
+        }
+
+        .btn {
+            padding: 10px 18px;
+            font-size: 13px;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.4s ease, transform 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(45deg, #4b4b4b, #4b4b4b);
+            margin-top: 5px;
+        }
+
+        .btn:hover {
+            background: linear-gradient(45deg, #4b4b4b, #4b4b4b);
+            transform: translateY(-2px);
+        }
+
+        .btn:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        
+        <!-- Leadership Section (Left) -->
+        <div class="leadership-section">
+            <h1>PIMPINAN</h1> <!-- Title for leadership section -->
+            <div class="leader-card">
+                <img src="images/direktur.png" alt="Pimpinan 1" class="leader-photo">
+                <div class="leader-name">Daud Wondiwoy</div>
+                <div class="leader-position">Direktur</div>
+            </div>
+            <div class="leader-card">
+                <img src="images/komisaris.png" alt="Pimpinan 2" class="leader-photo">
+                <div class="leader-name">Novy Punuh</div>
+                <div class="leader-position">Komisaris</div>
+            </div>
+        </div>
+
+        <!-- Gallery Section (Right) -->
+        <div class="gallery-container">
+            <h2>GALERI</h2> <!-- Title for gallery section -->
+            <aside id="gallery" class="gallery-frame text-center scrollto clearfix" data-featherlight-gallery data-featherlight-filter="a">
+                <a href="images/foto/foto1.jpg" data-featherlight="image">
+                    <img src="images/foto/foto1.jpg" alt="Landing Page"/>
+                </a>
+                <a href="images/foto/foto2.jpg" data-featherlight="image">
+                    <img src="images/foto/foto2.jpg" alt="Landing Page"/>
+                </a>
+                <a href="images/foto/foto3.jpg" data-featherlight="image">
+                    <img src="images/foto/foto3.jpg" alt="Landing Page"/>
+                </a>
+                <a href="images/foto/foto4.jpg" data-featherlight="image">
+                    <img src="images/foto/foto4.jpg" alt="Landing Page"/>
+                </a>
+                <a href="images/foto/foto5.jpg" data-featherlight="image">
+                    <img src="images/foto/foto5.jpg" alt="Landing Page"/>
+                </a>
+                <a href="images/foto/foto6.jpg" data-featherlight="image">
+                    <img src="images/foto/foto6.jpg" alt="Landing Page"/>
+                </a>
+                <a href="images/foto/foto7.jpg" data-featherlight="image">
+                    <img src="images/foto/foto7.jpg" alt="Landing Page"/>
+                </a>
+                <a href="images/foto/foto8.jpg" data-featherlight="image">
+                    <img src="images/foto/foto8.jpg" alt="Landing Page"/>
+                </a>
+                <a href="images/foto/foto9.jpg" data-featherlight="image">
+                    <img src="images/foto/foto9.jpg" alt="Landing Page"/>
+                </a>
+            </aside>
+
+            <!-- Button below the gallery -->
+            <button class="btn btn-lg btn-gradient" onclick="window.location.href='galeri.html'">Full Gallery</button>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+    <html lang="id">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video YouTube dan Believing Section</title>
+    <style>
+        /* Gaya Umum */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        /* Kontainer utama */
+        .main-container {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        /* Container untuk Video */
+        .video-container {
+            flex: 1 1 40%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+
+        .video-container:hover {
+            transform: scale(1.02);
+        }
+
+        .responsive-video {
+            width: 100%;
+            height: 450px;
+            max-height: 800px;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Fitur Pimpinan */
+        .leader-section {
+            margin-top: 29px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .leader-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .leader-info {
+            flex: 1;
+        }
+
+        .leader-info h4 {
+            margin: 0;
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .leader-info p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* Container untuk Bagian Believing */
+        .believing-container {
+            flex: 1 1 60%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+
+        /* Gaya untuk judul */
+        .section-heading h3 {
+            font-size: 24px;
+            color: #666;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .section-title {
+            font-size: 32px;
+            color: #333;
+            margin: 10px 0 20px;
+            font-weight: 700;
+        }
+
+        .believing-container p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* Desain Responsif */
+        @media (max-width: 768px) {
+            .main-container {
+                flex-direction: column;
+            }
+
+            .video-container {
+                height: auto;
+            }
+
+            .section-title {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Kontainer Utama -->
+    <div class="main-container">
+    
+        <!-- Video Section (Left) -->
+        <div class="video-container">
+            <iframe
+                src="https://www.youtube.com/embed/Kdl3erX8kA4" 
+                frameborder="0"
+                allowfullscreen
+                class="responsive-video">
+            </iframe>
+            
+            <!-- Fitur Pimpinan -->
+            <div class="leader-section">
+                <img src="leader-image.jpg" alt="Foto Pimpinan" class="leader-image">
+                <div class="leader-info">
+                    <h4>Bapak John Doe</h4>
+                    <p>Pimpinan CV Klasagun Papua Abadi</p>
+                    <p>Bapak John Doe telah memimpin CV Klasagun Papua Abadi dengan dedikasi tinggi dan visi untuk memberdayakan masyarakat Papua melalui pembangunan yang berkelanjutan dan berkualitas.</p>
+                </div>
+            </div>
+            <div class="leader-section">
+                <img src="leader-image.jpg" alt="Foto Pimpinan" class="leader-image">
+                <div class="leader-info">
+                    <h4>Bapak John Doe</h4>
+                    <p>Pimpinan CV Klasagun Papua Abadi</p>
+                    <p>Bapak John Doe telah memimpin CV Klasagun Papua Abadi dengan dedikasi tinggi dan visi untuk memberdayakan masyarakat Papua melalui pembangunan yang berkelanjutan dan berkualitas.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bagian Believing (Right) -->
+        <div class="believing-container">
+            <div class="section-heading">
+                <h3>BELIEVING</h3>
+            </div>
+            <h2 class="section-title">Focusing On CV Klasagun Papua Abadi</h2>
+            <p>CV. Klasagun Papua Abadi adalah perusahaan lokal yang dimiliki oleh Orang Asli Papua (OAP), bergerak di bidang jasa konstruksi, dan berlokasi di Kota Sorong, Provinsi Papua Barat Daya. 
+                Sejak didirikan, perusahaan ini telah menunjukkan komitmen kuat dalam pembangunan infrastruktur dan pengembangan daerah di Papua. Dengan fokus pada kualitas dan keberlanjutan, CV. Klasagun Papua Abadi 
+                berupaya tidak hanya untuk memenuhi kebutuhan konstruksi di wilayah tersebut, tetapi juga untuk memberdayakan masyarakat setempat melalui pemberian lapangan pekerjaan dan pelatihan.</p>
+            
+            <p>Sebagai perusahaan yang mengutamakan kepentingan lokal, CV. Klasagun Papua Abadi diharapankan dapat menciptakan perubahan positif dan berkelanjutan di Papua Barat Daya. Melalui berbagai proyek konstruksi 
+                yang dilaksanakannya, perusahaan ini juga berperan aktif dalam memperbaiki infrastruktur publik, seperti jalan, jembatan, dan bangunan publik, yang sangat dibutuhkan oleh masyarakat. Dengan dedikasi pada kualitas dan integritas, 
+                CV. Klasagun Papua Abadi terus berusaha menjadi mitra terpercaya bagi pemerintah dan masyarakat dalam membangun Papua yang lebih maju dan sejahtera.
+            </p>
+            <p>
+                Kami adalah mitra terpercaya Anda dalam bidang kontraktor dan pengadaan material. Berlokasi di Jln. Moyo Km. 13, Klasaman, 
+                Distrik Klaurung, Kota Sorong, Papua Barat Daya, kami memiliki pengalaman yang luas dalam menyediakan layanan konstruksi berkualitas tinggi di Papua.
+                Dengan komitmen kami untuk memberikan hasil terbaik, kami siap menjawab kebutuhan proyek konstruksi Anda dengan profesionalisme dan integritas yang tinggi. 
+                Hubungi kami melalui nomor HP yang tertera untuk konsultasi dan informasi lebih lanjut. Mari bangun masa depan yang lebih baik bersama CV. KLASAGUN PAPUA ABADI.
+            </p>
+            <p>
+                Kami memiliki pengalaman yang luas dalam industri konstruksi di Papua Barat Daya, memberikan kepercayaan bagi pelanggan dalam setiap proyek yang kami tangani.
+                Kami mengutamakan kualitas dalam setiap tahap konstruksi, dari perencanaan hingga pelaksanaan, untuk memberikan hasil terbaik yang memenuhi standar dan kebutuhan pelanggan.
+                Kami selalu siap memberikan pelayanan yang ramah, responsif, dan personal kepada setiap pelanggan, memastikan kepuasan dan kepercayaan pelanggan terjaga sepenuhnya.
+                Tim kami terdiri dari tenaga kerja yang terampil dan berpengalaman, yang menjamin pelaksanaan proyek dengan efisiensi dan kepatuhan terhadap tenggat waktu.
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+
+<!-- Product Start -->
+        <!DOCTYPE html>
+        <html lang="id">
+        <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fitur Harga Produk</title>
+        <style>
+            body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            }
+            .product-container {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow-x: auto;
+            }
+            .product-item {
+            width: 220px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease;
+            }
+            .product-item:hover {
+            transform: translateY(-5px);
+            }
+            .product-image {
+            width: 100%;
+            height: auto;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            transition: transform 0.3s ease;
+            }
+            .product-image:hover {
+            transform: scale(1.05);
+            }
+            .product-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 15px 0 5px;
+            color: #333;
+            }
+            .product-description {
+            font-size: 14px;
+            color: #666;
+            padding: 0 15px;
+            margin: 0 0 10px;
+            }
+            .product-price {
+            font-size: 18px;
+            color: #009688;
+            font-weight: bold;
+            margin: 10px 0;
+            }
+            .buy-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #009688;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 15px;
+            text-decoration: none;
+            }
+            .buy-button:hover {
+            background-color: #00796b;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            }
+            .buy-button:active {
+            transform: scale(0.98);
+            }
+        </style>
+        </head>
+        <body>
+
+        <div class="product-container">
+        
+        <!-- Product Item 1 -->
+        <div class="product-item">
+            <img src="https://via.placeholder.com/220x150" alt="Gambar Produk A" class="product-image">
+            <div class="product-title">Produk A</div>
+            <div class="product-description">Deskripsi singkat tentang Produk A yang stylish dan berkualitas tinggi.</div>
+            <div class="product-price">Rp. 100,000</div>
+            <a href="#" class="buy-button">Beli Sekarang</a>
+        </div>
+
+        <!-- Product Item 2 -->
+        <div class="product-item">
+            <img src="https://via.placeholder.com/220x150" alt="Gambar Produk B" class="product-image">
+            <div class="product-title">Produk B</div>
+            <div class="product-description">Deskripsi singkat tentang Produk B yang tahan lama dan praktis digunakan.</div>
+            <div class="product-price">Rp. 200,000</div>
+            <a href="#" class="buy-button">Beli Sekarang</a>
+        </div>
+
+        <!-- Product Item 3 -->
+        <div class="product-item">
+            <img src="https://via.placeholder.com/220x150" alt="Gambar Produk C" class="product-image">
+            <div class="product-title">Produk C</div>
+            <div class="product-description">Deskripsi singkat tentang Produk C yang ramah lingkungan dan aman.</div>
+            <div class="product-price">Rp. 300,000</div>
+            <a href="#" class="buy-button">Beli Sekarang</a>
+        </div>
+
+        </div>
+
+        </body>
+        </html>
+        <!-- Product End -->
+
+
+        <!DOCTYPE html>
+        <html lang="id">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Formulir Umpan Balik & Testimoni</title>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    background-color: #f4f4f9;
+                    margin: 0;
+                    padding: 0;
+                }
+        
+                /* Kontainer Utama */
+                .container {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    padding: 100px 20px 20px;
+                }
+        
+                /* Judul */
+                .feedback-title {
+                    width: 100%;
+                    text-align: center;
+                    font-size: 25px;
+                    font-weight: bolder;
+                    font-style: italic;
+                    color: #333;
+                    margin-bottom: 20px;
+                }
+        
+                /* Rating Bintang */
+                .star-rating {
+                    display: flex;
+                    justify-content: center;
+                    font-size: 24px;
+                    color: #ccc;
+                    direction: rtl;
+                    margin-top: 10px;
+                }
+        
+                .star-rating input { display: none; }
+                .star-rating label {
+                    cursor: pointer;
+                    transition: color 0.3s;
+                }
+        
+                .star-rating input:checked ~ label,
+                .star-rating label:hover,
+                .star-rating label:hover ~ label {
+                    color: #ffda79;
+                }
+        
+                /* Formulir Umpan Balik */
+                .feedback-form {
+                    width: 35%;
+                    padding: 15px;
+                    background: #f8f8f8;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+                    margin: 20px 10px;
+                }
+        
+                .feedback-form input,
+                .feedback-form textarea {
+                    width: 100%;
+                    padding: 10px;
+                    margin-bottom: 10px;
+                    border-radius: 4px;
+                    border: 1px solid #ccc;
+                }
+        
+                .feedback-form button {
+                    background-color: #4b4b4b;
+                    color: white;
+                    padding: 8px 16px;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    transition: background-color 0.3s, transform 0.2s;
+                    width: 100%;
+                }
+        
+                .feedback-form button:hover { background-color: #333; }
+        
+                /* Testimonial */
+                .testimonials {
+                    width: 60%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    margin: 20px 10px;
+                }
+        
+                .testimonial {
+                    background: #fff;
+                    border-radius: 8px;
+                    padding: 15px;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                    text-align: left;
+                    position: relative;
+                }
+        
+                .testimonial img {
+                    border-radius: 50%;
+                    width: 50px;
+                    height: 50px;
+                    float: left;
+                    margin-right: 10px;
+                }
+        
+                .testimonial q {
+                    font-style: italic;
+                    color: #555;
+                }
+        
+                .testimonial footer {
+                    color: #888;
+                    font-size: 0.9em;
+                    margin-top: 10px;
+                }
+        
+                /* Tombol Show More */
+                .toggle-button {
+                    background-color: #4b4b4b;
+                    color: white;
+                    padding: 8px 16px;
+                    border: none;
+                    border-radius: 4px;
+                    font-size: 14px;
+                    cursor: pointer;
+                    transition: background-color 0.3s, transform 0.2s;
+                    margin-top: 10px;
+                }
+        
+                .toggle-button:hover { background-color: #333; }
+                .toggle-button:active { transform: scale(0.98); }
+            </style>
+        </head>
+        <body>
+        
+        <div class="container">
+            <!-- Formulir Umpan Balik -->
+            <div class="feedback-form">
+                <!-- Judul Umpan Balik -->
+                <div class="feedback-title">Berikan Umpan Balik Anda</div>
+        
+                <input type="text" id="customer-name" placeholder="Nama Anda" required>
+                <input type="email" id="customer-email" placeholder="Alamat Email Anda" required>
+                <div class="star-rating">
+                    <input type="radio" id="star5" name="rating" value="5">
+                    <label for="star5" title="5 bintang"><i class="fa fa-star"></i></label>
+                    <input type="radio" id="star4" name="rating" value="4">
+                    <label for="star4" title="4 bintang"><i class="fa fa-star"></i></label>
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3" title="3 bintang"><i class="fa fa-star"></i></label>
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2" title="2 bintang"><i class="fa fa-star"></i></label>
+                    <input type="radio" id="star1" name="rating" value="1">
+                    <label for="star1" title="1 bintang"><i class="fa fa-star"></i></label>
+                </div>
+                <textarea id="feedback-message" placeholder="Tulis pesan Anda di sini..."></textarea>
+                <button type="button" onclick="submitFeedback()">Kirim Umpan Balik</button>
+            </div>
+
+    <!-- Testimoni -->
+    <div class="testimonials">
+        <!-- Testimonial 1 -->
+        <blockquote class="testimonial">
+            <img src="images/user-images/user-1.jpg" alt="User">
+            <q>
+                <span class="preview-text">I thought I’d contact you here as I didn’t hear back from you from my email last week!</span>
+                <span id="hidden-text-1" class="hidden-text" style="display: none;">
+                    It’s Cameron from The Cameron Journal again. I’ve been reaching out because I’m looking at helping 
+                    organizations like yours achieve your goals this year...
+                </span>
+            </q>
+            <footer>Cameron Cowan - Happy Customer</footer>
+        </blockquote>
+
+        <!-- Testimonial 2 -->
+        <blockquote class="testimonial">
+            <img src="images/user-images/user-2.jpg" alt="User">
+            <q>
+                <span class="preview-text">Mantap 👍 Mudah2an ini perusahaan akan menjadi pionir dari Papua, semoga sukses selalu dan jaya selalu</span>
+                <span id="hidden-text-2" class="hidden-text" style="display: none;">
+                    Perusahaan ini sedang menyiapkan berbagai langkah strategis untuk menjadi pelopor di Papua...
+                </span>
+            </q>
+            <footer>R4 - Happy Customer</footer>
+        </blockquote>
+        
+        <!-- Testimonial 3 -->
+        <blockquote class="testimonial">
+            <img src="images/user-images/user-3.jpg" alt="User">
+            <q>
+                <span class="preview-text">I am reaching out to explore potential collaborations where I can bring my proven track...</span>
+                <span id="hidden-text-3" class="hidden-text" style="display: none;">
+                    ...record in sales and marketing to your team.
+                </span>
+            </q>
+            <footer>Daniel Sanderson - Happy Customer</footer>
+        </blockquote>
+    </div>
+</div>
+
+<script>
+    function submitFeedback() {
+        const name = document.getElementById('customer-name').value;
+        const email = document.getElementById('customer-email').value;
+        let rating = document.querySelector('input[name="rating"]:checked');
+        rating = rating ? rating.value : null;
+        const message = document.getElementById('feedback-message').value;
+
+        if (!name || !email || !rating || !message) {
+            alert("Silakan lengkapi semua data: nama, email, rating, dan pesan umpan balik.");
+            return;
+        }
+
+        const encodedName = encodeURIComponent(name);
+        const encodedEmail = encodeURIComponent(email);
+        const encodedRating = encodeURIComponent(rating);
+        const encodedMessage = encodeURIComponent(message);
+        const phone = '6285244542679';
+
+        const whatsappURL = `https://api.whatsapp.com/send?phone=${phone}&text=Umpan%20Balik%20dari%20${encodedName}%20(${encodedEmail})%3A%20Rating%20(${encodedRating})%3A%20${encodedMessage}`;
+        window.open(whatsappURL, '_blank');
+
+        document.getElementById('customer-name').value = '';
+        document.getElementById('customer-email').value = '';
+        document.querySelector('input[name="rating"]:checked').checked = false;
+        document.getElementById('feedback-message').value = '';
+    }
+</script>
+
+</body>
+</html>
+
+
+
+    </main>
+    <!--End Main Content Area-->

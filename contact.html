@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rating Feature</title>
+    <style>
+        /* Container to position map and rating form side-by-side */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin: 40px auto;
+            max-width: 1300px;
+            padding: 0 20px;
+            gap: 20px;
+        }
+
+        /* Enhanced styling for the map container */
+        .map-container {
+            width: 45%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 3px solid #000000;
+            height: 565px;
+        }
+
+        .map-container:hover {
+            transform: scale(1.02);
+            box-shadow: 3px 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .map-container iframe,
+        .map-container .map {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+
+        /* Styling for the rating form */
+        .rating-form {
+            width: 45%;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            background: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Form title */
+        .rating-form h2 {
+            font-size: 22px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Labels and inputs */
+        .rating-form label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #555;
+            font-weight: bold;
+        }
+        .rating-form input, .rating-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            color: #333;
+        }
+        .rating-form textarea {
+            resize: vertical;
+        }
+
+        /* Star rating styling */
+        .rating-form .star-rating {
+            font-size: 24px;
+            color: #FFD700; /* Gold color */
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+        .star-rating .star {
+            font-size: 28px;
+            transition: color 0.3s;
+        }
+
+        /* Submit button */
+        .rating-form button {
+            width: 100%;
+            padding: 12px;
+            background: #0ab331;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .rating-form button:hover {
+            background: #0ab331;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Map with enhanced styling, positioned on the left -->
+    <div class="map-container">
+        <iframe  
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=CV. KLASAGUN PAPUA ABADI+Klasaman+Sorong+Indonesia"
+            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"> 
+        </iframe> 
+    </div>
+    
+    <!-- Rating form positioned on the right -->
+    <div class="rating-form">
+        <h2>Submit Your Rating</h2>
+        <form onsubmit="sendToWhatsApp(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required placeholder="Your Name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required placeholder="Your Email">
+
+            <label for="rating">Rating:</label>
+            <div class="star-rating" id="starRating">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+            </div>
+
+            <label for="message">Message:</label>
+            <textarea id="message" rows="4" required placeholder="Your Message"></textarea>
+
+            <button type="submit">Submit Rating</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    // JavaScript for WhatsApp Integration and Star Rating
+    let selectedRating = 0;
+    
+    document.querySelectorAll('.star').forEach(star => {
+        star.addEventListener('click', function() {
+            selectedRating = this.getAttribute('data-value');
+            highlightStars(selectedRating);
+        });
+    });
+
+    function highlightStars(rating) {
+        document.querySelectorAll('.star').forEach(star => {
+            if (star.getAttribute('data-value') <= rating) {
+                star.style.color = "#FFD700";
+            } else {
+                star.style.color = "#ccc";
+            }
+        });
+    }
+
+    function sendToWhatsApp(event) {
+        event.preventDefault();
+
+        // Get form values
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        // Format the message for WhatsApp
+        const whatsappMessage = `Hello!%0A%0A*New Rating Submission*%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Rating:* ${selectedRating} Stars%0A*Message:* ${message}`;
+
+        // WhatsApp number (replace with your actual phone number)
+        const phoneNumber = "6285244542679"; // e.g., "6281234567890" for Indonesia
+
+        // Open WhatsApp with pre-filled message
+        window.open(`https://wa.me/${phoneNumber}?text=${whatsappMessage}`, "_blank");
+    }
+</script>
+
+</body>
+</html>

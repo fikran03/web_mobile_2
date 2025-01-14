@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embed Video on Click</title>
+    <style>
+        #video-frame {
+            display: none; /* Sembunyikan iframe saat pertama kali dimuat */
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" onclick="showVideo();" id="watch-video-btn">
+        WATCH VIDEO <i class="fa fa-play" aria-hidden="true"></i>
+    </a>
+    
+    <!-- Tempat iframe video YouTube akan muncul -->
+    <div id="video-frame">
+        <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/zWWNOowLKP4" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <script>
+        function showVideo() {
+            // Tampilkan div video-frame
+            document.getElementById("video-frame").style.display = "block";
+        }
+    </script>
+</body>
+</html>

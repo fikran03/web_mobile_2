@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+    <!--Page Title-->
+    <title>e-Klasagun</title>
+
+    <!--Meta Keywords and Description-->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="images/yup.jpg" title="KPA"/>
+
+    <!-- Main CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Namari Color CSS -->
+    <link rel="stylesheet" href="css/namari-color.css">
+
+    <!--Icon Fonts - Font Awesome Icons-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- Animate CSS-->
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
+
+    <!--Google Webfonts-->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<!-- Preloader -->
+<div id="preloader">
+    <div id="status" class="la-ball-triangle-path">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+<!--End of Preloader-->
+
+<div class="page-border" data-wow-duration="0.7s" data-wow-delay="0.2s">
+    <div class="top-border wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;"></div>
+    <div class="right-border wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;"></div>
+    <div class="bottom-border wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;"></div>
+    <div class="left-border wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;"></div>
+</div>
+
+<div id="wrapper">
+
+    <header id="banner" class="scrollto clearfix" data-enllax-ratio=".5">
+        <div id="header" class="nav-collapse">
+            <div class="row clearfix">
+                <div class="col-1">
+
+                    <!--Logo-->
+                    <div id="logo">
+
+                        <!--Logo that is shown on the banner-->
+                        <img src="images/ekla.png" id="banner-logo" alt="Landing Page"/>
+                        <!--End of Banner Logo-->
+
+                        <!--The Logo that is shown on the sticky Navigation Bar-->
+                        <img src="images/ekla.png" id="navigation-logo" alt="Landing Page"/>
+                        <!--End of Navigation Logo-->
+
+                    </div>
+                    <!--End of Logo-->
+
+                    <aside>
+                        <!-- Social Icons in Header -->
+                        <ul class="social-icons">
+                            <li>
+                                <a target="_blank" title="Facebook" href="https://www.facebook.com/username">
+                                    <i class="fa fa-facebook fa-1x"></i><span>Facebook</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" title="Instagram" href="https://www.instagram.com/klasagun_papua_abadi/profilecard/?igsh=MW16MzVkOWRzaHd6aA==">
+                                    <i class="fa fa-instagram fa-1x"></i><span>Instagram</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" title="Email" href="mailto:klasagunpapuaabadi@gmail.com">
+                                    <i class="fa fa-envelope fa-1x"></i><span>Email</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- End of Social Icons in Header -->
+                    </aside>
+                    
+
+                    <!--Main Navigation-->
+                    <nav id="nav-main">
+                        <ul>
+                            <li>
+                                <a href="#banner">Home</a>
+                            </li>
+                            <li>
+                                <a href="#about">About</a>
+                            </li>
+                            <li>
+                                <a href="#gallery">Gallery</a>
+                            </li>
+                            <li>
+                                <a href="#services">Services</a>
+                            </li>
+                            <li>
+                                <a href="#testimonials">Testimonials</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <style>
+                        #nav-main {
+                            margin-left: 100px;
+                        }
+                    </style>
+                    <!--End of Main Navigation-->
+
+                    <div id="nav-trigger"><span></span></div>
+                    <nav id="nav-mobile"></nav>
+
+                </div>
+            </div>
+        </div><!--End of Header-->
+
+        <!-- Banner Content -->
+        <div id="banner-content" class="row clearfix">
+
+            <div class="col-38">
+
+                <div class="section-heading">
+                    <h1 class="left-align typewriter"></h1>
+                    <h2 class="left-align">Mengutamakan Kualitas dalam Setiap Proyek Konstruksi Layanan Kontraktor dan Pengadaan Material Profesional di Sorong, Papua Barat Daya</h2>
+                </div>
+
+                <style>
+                    .left-align {
+                        text-align: left;
+                        font-family: Arial, sans-serif;
+                        font-size: 2em;
+                    }
+                    
+                    .typewriter::after {
+                        content: '';
+                        animation: blink 0.7s step-end infinite;
+                        color: black;
+                    }
+                    
+                    @keyframes blink {
+                        50% {
+                            opacity: 0;
+                        }
+                    }
+
+                </style>
+
+                <script>
+                    const texts = ["CV. KLASAGUN PAPUA ABADI", "PENYUPLAI MATERIAL & KONTRAKTOR"];
+                    let textIndex = 0;  // Index untuk menentukan teks yang sedang ditampilkan
+                    let charIndex = 0;  // Index karakter saat ini
+                    let isDeleting = false;
+                    const speed = 100;   // Kecepatan mengetik dalam milidetik
+                    const delay = 2000;  // Jeda sebelum menghapus teks
+
+                    function typeWriter() {
+                        const element = document.querySelector('.typewriter');
+                        const currentText = texts[textIndex];
+
+                        // Kondisi saat menambahkan teks
+                        if (!isDeleting && charIndex <= currentText.length) {
+                            element.innerHTML = currentText.slice(0, charIndex) + '<span class="cursor"></span>';
+                            charIndex++;
+                            setTimeout(typeWriter, speed);
+
+                        // Mulai penghapusan teks ketika selesai mengetik
+                        } else if (isDeleting && charIndex >= 0) {
+                            element.innerHTML = currentText.slice(0, charIndex) + '<span class="cursor"></span>';
+                            charIndex--;
+                            setTimeout(typeWriter, speed);
+
+                        // Reset ke kondisi mengetik untuk teks berikutnya
+                        } else if (charIndex < 0) {
+                            isDeleting = false;
+                            charIndex = 0;
+                            textIndex = (textIndex + 1) % texts.length;  // Beralih ke teks berikutnya
+                            setTimeout(typeWriter, speed);
+
+                        // Jeda sebelum mulai penghapusan teks
+                        } else {
+                            isDeleting = true;
+                            setTimeout(typeWriter, delay);
+                        }
+                    }
+
+                    // Mulai animasi saat halaman dimuat
+                    window.onload = typeWriter;
+
+
+                </script>
+                
+
+                <!-- Call to Action -->
+                <a href="tel:+6281243172003" class="button">HUBUNGI KAMI</a>
+                <!-- End Call to Action -->
+
+            </div>
+
+        </div><!-- End of Row -->
+
+        <style>
+            .left-align {
+                text-align: left; /* Pastikan teks rata kiri */
+            }
+        </style>
+
+    </header>
+
+    <!--Main Content Area-->
+    <main id="content">
+
+        <!--Introduction-->
+        <section id="about" class="introduction scrollto">
+
+            <div class="row clearfix">
+
+                <div class="col-3">
+                    <div class="section-heading">
+                        <!-- Tambahkan tag img di sini -->
+                        <img src="images/yup.jpg" alt="Layanan CV. Klasagun Papua Abadi" style="width:100px; height:100px;">
+                        
+                        <h3>LAYANAN</h3>
+                        <h2 class="section-title">CV. KLASAGUN PAPUA ABADI</h2>
+                        <p class="section-subtitle" style="color: black;">
+                            Kami adalah mitra terpercaya Anda dalam konstruksi, menyediakan solusi berkualitas tinggi dengan layanan profesional, tepat waktu, dan sesuai anggaran. 
+                            Dengan tim ahli berpengalaman dan teknologi terbaru, kami berkomitmen untuk menghadirkan hasil terbaik
+                            yang dapat memenuhi kebutuhan serta harapan Anda di setiap proyek, mulai dari perencanaan hingga penyelesaian.
+                        </p>                        
+                    </div>
+                    <button class="expand-btn" onclick="window.location.href='sejarah.html'">Lihat Sejarah</button>
+
+                    <style>
+                    .expand-btn {
+                        background: linear-gradient(135deg, #4a90e2, #007bff); /* Gradient background */
+                        color: white;
+                        padding: 12px 24px;
+                        font-size: 16px;
+                        font-weight: bold;
+                        border: none;
+                        border-radius: 8px;
+                        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+                        cursor: pointer;
+                        transition: all 0.3s ease; /* Smooth transition */
+                        display: inline-block; /* Membuat tombol menyesuaikan ukuran konten */
+                        width: 115px;
+                        height: 30px;
+                        /* width: 200px; */ /* Opsional: menentukan lebar spesifik */
+                    }
+
+                    .expand-btn:hover {
+                        background: linear-gradient(135deg, #007bff, #4a90e2); /* Reverse gradient on hover */
+                        transform: scale(1.05); /* Slightly enlarge button on hover */
+                        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+                    }
+
+                    .expand-btn:active {
+                        transform: scale(0.95); /* Slightly shrink on click */
+                        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Lighter shadow on click */
+                    }
+                    </style>
+                </div>
+                
+
+                <div class="col-2-3">
+
+                    <!--Icon Block-->
+                    <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.1s">
+                        <!--Icon-->
+                        <div class="icon">
+                            <img src="images/satu.png" alt="Architecture Logo" style="width:50px; height:auto;"> <!-- Gambar logo -->
+                        </div>
+                        <!--Icon Block Description-->
+                        <div class="icon-block-description">
+                            <h4>Architecture &amp; Building</h4>
+                            <p>Bidang ini berkaitan dengan perencanaan, desain, dan pembangunan struktur bangunan yang meliputi rumah tinggal, gedung komersial, dan fasilitas umum lainnya. 
+                                Kami menyediakan layanan profesional dalam merancang dan membangun bangunan yang sesuai dengan kebutuhan dan visi klien kami.</p>
+                        </div>
+                    </div>
+                    <!--End of Icon Block-->
+
+
+                    <!--Icon Block-->
+                    <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.3s">
+                        <!--Icon-->
+                        <div class="icon">
+                            <img src="images/dua.png" alt="Architecture Logo" style="width:50px; height:auto;"> <!-- Gambar logo -->
+                        </div>
+                        <!--Icon Block Description-->
+                        <div class="icon-block-description">
+                            <h4>Konstruksi</h4>
+                            <p>Kami adalah ahli dalam pelaksanaan konstruksi, termasuk pemancangan, pengecoran, pemasangan struktur, dan finishing bangunan. 
+                                Dengan tenaga kerja terampil dan peralatan modern, kami memberikan hasil berkualitas tinggi dan tepat waktu dalam setiap proyek konstruksi yang kami tangani.</p>
+                        </div>
+                    </div>
+                    <!--End of Icon Block-->
+
+                    <!--Icon Block-->
+                    <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.5s">
+                        <!--Icon-->
+                        <div class="icon">
+                            <img src="images/tiga.png" alt="Architecture Logo" style="width:50px; height:auto;"> <!-- Gambar logo -->
+                        </div>
+                        <!--Icon Block Description-->
+                        <div class="icon-block-description">
+                            <h4>Laveransir</h4>
+                            <p>Bidang ini mencakup pengadaan material bangunan dan peralatan konstruksi. Kami menyediakan berbagai macam material berkualitas tinggi, seperti batu bata, semen, 
+                                besi beton, dan pasir hitam dengan kualitas terbaik di kota sorong, serta menyediakan layanan pengiriman untuk memastikan kelancaran proyek konstruksi Anda.</p>
+                        </div>
+                    </div>
+                    <!--End of Icon Block-->
+
+                    <!--Icon Block-->
+                    <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.5s">
+                        <!--Icon-->
+                        <div class="icon">
+                            <img src="images/empat.png" alt="Architecture Logo" style="width:50px; height:auto;"> <!-- Gambar logo -->
+                        </div>
+                        <!--Icon Block Description-->
+                        <div class="icon-block-description">
+                            <h4>Amanah</h4>
+                            <p>CV. Klasagun Papua Abadi selalu menjunjung tinggi amanah dalam setiap pekerjaan yang kami lakukan. Sebagai kontraktor dan penyedia material terpercaya, kami berkomitmen untuk memberikan hasil terbaik dengan integritas dan tanggung jawab. 
+                                Setiap proyek yang kami tangani dikerjakan dengan teliti, transparan, dan sesuai dengan janji yang telah kami buat, memastikan kepuasan dan kepercayaan penuh dari klien.</p>
+                        </div>
+                    </div>
+                    <!--End of Icon Block-->
+
+                </div>
+            </div>
+        </section>
+        <!--End of Introduction-->
+
+</body>
+</html>
+
+  
+<footer style="background: url('images/kerja.jpg') no-repeat center center; 
+    background-size: cover; 
+    color: #fff; 
+    padding: 40px 0; 
+    margin-top: 50px;
+    font-family: Arial, sans-serif;"> 
+
+    <!-- Overlay Background -->
+    <div style="background-color: rgba(0, 0, 0, 0.8); padding: 30px; max-width: 1200px; margin: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);"> 
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+
+            <!-- Address & Contact --> 
+            <div style="font-size: 14px; line-height: 1.6;"> 
+                <p style="margin: 0 0 10px; font-weight: bold;"><strong>Alamat:</strong> Jln. Moyo Km. 13 RT.001 RW 007 KEL. KLASAMAN DISTRIK KLAURUNG KOTA SORONG PROP. PAPUA BARAT DAYA</p> 
+                
+                <p style="margin: 0 0 8px;"><strong>Email:</strong> <a href="mailto:klasagunpapuaabadi@gmail.com" style="color: #ffda79; text-decoration: none;">klasagunpapuaabadi@gmail.com</a></p> 
+                
+                <p style="margin: 0 0 6px;"><strong>Kontak:</strong> <a href="tel:+6281243172003" style="color: #ffda79; text-decoration: none; font-weight: bold;">+62 812 4317 2003</a></p> 
+                
+                <p style="margin: 0 0 6px;"><strong>Kontak:</strong> <a href="tel:+628124824040" style="color: #ffda79; text-decoration: none; font-weight: bold;">+62 812 4824 040</a></p> 
+                
+                <p style="margin: 0;"><strong>Kontak:</strong> <a href="tel:+6281356785786" style="color: #ffda79; text-decoration: none; font-weight: bold;">+62 813 5678 5786</a></p> 
+            </div>
+
+            <!-- Company Logo and Info --> 
+            <div style="text-align: center;"> 
+                <img src="images/yup.jpg" alt="Logo Perusahaan" style="width: 130px; border-radius: 0; margin-bottom: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);"> 
+                
+                <p style="margin: 0 0 8px; font-weight: bold; font-size: 16px;">CV. Klasagun Papua Abadi</p> 
+                <p style="margin: 0; font-size: 14px;">Supplier dan Kontraktor Material yang berlokasi di Sorong, Papua Barat Daya, Indonesia.</p> 
+            </div>
+        </div>
+
+        <!-- Copyright --> 
+        <div style="text-align: center; padding: 20px 0 0; border-top: 1px solid #555; margin-top: 20px; font-size: 12px;"> 
+            <p style="margin: 0;">&copy; 2024 CV. Klasagun Papua Abadi. All rights reserved.</p> 
+        </div> 
+
+    </div>
+</footer>
+
+    
+    
+    <!-- Link to Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+
+</div>
+
+<!-- Include JavaScript resources -->
+<script src="js/jquery.1.8.3.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/featherlight.min.js"></script>
+<script src="js/featherlight.gallery.min.js"></script>
+<script src="js/jquery.enllax.min.js"></script>
+<script src="js/jquery.scrollUp.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/jquery.stickyNavbar.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/images-loaded.min.js"></script>
+<script src="js/lightbox.min.js"></script>
+<script src="js/site.js"></script>
+
+
+</body>
+</html>
